@@ -11,6 +11,17 @@ ion-card{
     }
     .bottom{
         padding-left: 20px;
+        padding-bottom: 10px;
+        ion-icon {
+            font-size: 25px;
+          }
+
+          .locked{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          }
     }
 
 }

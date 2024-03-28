@@ -20,7 +20,10 @@
       </ion-card-content>
 
       <div class="bottom">
-        <ion-icon name="bag-add-outline"></ion-icon>
+        <div class="locked">
+          <ion-icon name="bag-add-outline"></ion-icon>
+          <p>Locked</p>
+        </div>
       </div>
 
 
@@ -28,4 +31,22 @@
 
 
   </div>
+
+
+
+
+  <div class="rates">
+    <h2>Today's Rates</h2>
+    <ion-list>
+      <ion-item>
+        @for (rate of rates; track rate){
+
+            <ion-label>{{ rate.key }}</ion-label>
+        <ion-note slot="end">{{ rate.value }}</ion-note>
+        }
+      
+      </ion-item>
+    </ion-list>
+  </div>
+
 </ion-content>
