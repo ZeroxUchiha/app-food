@@ -1,0 +1,16 @@
+ion-card{
+    color: white;
+    background: rgb(194,21,180);
+    background: linear-gradient(90deg, rgba(194,21,180,1) 0%, rgba(250,39,132,1) 52%, rgba(237,138,39,1) 100%);
+
+    ion-card-title{
+        --color:white;
+    }
+    ion-card-subtitle{
+        --color:white;
+    }
+    .bottom{
+        padding-left: 20px;
+    }
+
+}
