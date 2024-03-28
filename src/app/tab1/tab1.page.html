@@ -6,29 +6,39 @@
 
   <div style="padding-top: 80px;">
 
+    <swiper-container
+    [modules]="swiperModules"
+    [slidesPerView]="1.1"
+    [keyboard]="true"
+    [centerSlides]="true">
+    @for (balance of balances; track balance){
+      <swiper-slide>
+        <ion-card>
 
-    <ion-card>
 
-
-      <ion-card-header>
-        <ion-card-title>{{balence}}</ion-card-title>
-        <ion-card-subtitle>Current balence</ion-card-subtitle>
-      </ion-card-header>
+          <ion-card-header>
+            <ion-card-title>{{balance}}</ion-card-title>
+            <ion-card-subtitle>Current balence</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
     
-      <ion-card-content>
-        Here's a small text description for the card content. Nothing more, nothing less.
-      </ion-card-content>
+          <div class="bottom">
+            <div class="locked">
+              <ion-icon name="bag-add-outline"></ion-icon>
+              <p>Locked</p>
+            </div>
+          </div>
+        </ion-card>
+  </swiper-slide>
 
-      <div class="bottom">
-        <div class="locked">
-          <ion-icon name="bag-add-outline"></ion-icon>
-          <p>Locked</p>
-        </div>
-      </div>
+  }
 
+</swiper-container>
 
-    </ion-card>
-
+   
 
   </div>
 
@@ -38,7 +48,10 @@
   <div class="rates">
     <h2>Today's Rates</h2>
     <ion-list>
+
+      
       @for (rate of rates; track rate){
+     
       <ion-item>
         
 
@@ -47,7 +60,9 @@
       
       
       </ion-item>
+
     }
+ 
     </ion-list>
   </div>
 
