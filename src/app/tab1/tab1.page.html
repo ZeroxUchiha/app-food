@@ -13,11 +13,11 @@
     [centerSlides]="true">
     @for (balance of balances; track balance){
       <swiper-slide>
-        <ion-card>
+        <ion-card [routerLink]="['/', 'tabs', 'acceuil', balance.id]">
 
 
           <ion-card-header>
-            <ion-card-title>{{balance}}</ion-card-title>
+            <ion-card-title>{{balance.balance}}</ion-card-title>
             <ion-card-subtitle>Current balence</ion-card-subtitle>
           </ion-card-header>
         
