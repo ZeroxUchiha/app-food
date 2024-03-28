@@ -15,13 +15,13 @@ import { bagAddOutline } from 'ionicons/icons';
 })
 export class Tab1Page {
   balence: string = "$5,7890,20";
-
-  rates: { [key: string]: number } = {
-    'USD': 1.0, // 1 USD = 1 USD (base currency)
-    'EUR': 0.85, // Assuming 1 USD = 0.85 EUR
-    'GBP': 0.72, // Assuming 1 USD = 0.72 GBP
-   
-  };
+  
+  rates: { currency: string, value: number }[] = [
+    { currency: 'USD', value: 1.0 }, // 1 USD = 1 USD (base currency)
+    { currency: 'EUR', value: 0.85 }, // Assuming 1 USD = 0.85 EUR
+    { currency: 'GBP', value: 0.72 }, // Assuming 1 USD = 0.72 GBP
+    // Add more currencies and their rates as needed
+  ];
   constructor() {
 
     addIcons({bagAddOutline,});

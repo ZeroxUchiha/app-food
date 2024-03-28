@@ -38,14 +38,16 @@
   <div class="rates">
     <h2>Today's Rates</h2>
     <ion-list>
+      @for (rate of rates; track rate){
       <ion-item>
-        @for (rate of rates; track rate){
+        
 
-            <ion-label>{{ rate.key }}</ion-label>
+            <ion-label>{{ rate.currency }}</ion-label>
         <ion-note slot="end">{{ rate.value }}</ion-note>
-        }
+      
       
       </ion-item>
+    }
     </ion-list>
   </div>
 
